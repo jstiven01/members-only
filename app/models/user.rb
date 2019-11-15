@@ -22,13 +22,29 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+
+    def digest_bcrypt(string)
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create(string, cost: cost)
+    end
   end
 
   # Remembers a user in the database for use in persistent sessions.
-  private
 
   def create_remember_token
     self.remember_token = User.new_token
     self.remember_digest = User.digest(remember_token)
+  end
+
+  # Returns true if the given token matches the digest.
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+
+    Digest::SHA1.hexdigest(digest.to_s).is_password?(token)
   end
 end
