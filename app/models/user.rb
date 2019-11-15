@@ -47,4 +47,8 @@ class User < ApplicationRecord
 
     Digest::SHA1.hexdigest(digest.to_s).is_password?(token)
   end
+
+  def forget
+    update_attribute(:remember_digest, nil)
+  end
 end
