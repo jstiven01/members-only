@@ -1,12 +1,14 @@
-<h1>Posts#new</h1>
-<%= form_for (@post) do |f| %>
+<section class="new-post"> 
+    <h1>New Post</h1>
+    <%= form_for (@post) do |f| %>
 
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    
-    <%= f.label :content %>
-    <%= f.text_area :content, cols: 20, rows: 40%>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        
+        <%= f.label :content %>
+        <%= f.text_area :content, cols: 20, rows: 40%>
 
 
-    <%= f.submit 'Submit Post'%>  
-<% end %>
+        <%= f.submit 'Submit Post'%>  
+    <% end %>
+</section>

@@ -19,3 +19,10 @@ User.create!(name:  name,
       password:              password,
       password_confirmation: password)
 end
+
+40.times do |n|
+    title_post = "Post Title Number #{n} "
+    content_post = "Post Content. This is the content of the post Number : #{n} "
+    user_id = 1
+    Post.create!(title: title_post, content: content_post, user_id: user_id)
+end

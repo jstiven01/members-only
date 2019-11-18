@@ -1,2 +1,9 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<section class="home"> 
+    <h1 class="title">Members-only App</h1>
+    <ul>
+    <li><%= link_to "All Posts", posts_path %></li>
+    <% unless logged_in? %>
+        <li><%= link_to "Sign in", signin_path %></li>
+    <% end %>
+    </ul>
+</section>

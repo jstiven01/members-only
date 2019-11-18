@@ -1,19 +1,26 @@
-<h1>Posts#index</h1>
-<% @posts.each do |post| %>
-<div>
-    <h3 ><%= post.title %></h3>
-    <p ><%= post.content %></p>
-    
-    <ul>
-        <% if logged_in? %>
-            <% user = User.find_by(id: post.user_id) %>
-            <li>
-                <span>Author: </span>
-                <span><%= user.name %></span>
-            </li>
-        <% end %>
+<section class="all-posts"> 
+    <h1>ALL POSTS</h1>
+    <%= will_paginate %>
+    <% @posts.each do |post| %>
+    <div>
+        <h3 ><%= post.title %></h3>
+        <p ><%= post.content %></p>
         
-        <li ><span>Date: </span><%= post.created_at %></li>
-    </ul>
-</div>
-<% end %>
+        <ul>
+            <% if logged_in? %>
+                <% user = User.find_by(id: post.user_id) %>
+                <li>
+                    <span>Author: </span>
+                    <span><%= user.name %></span>
+                </li>
+            <% end %>
+            
+            <li ><span>Date: </span><%= post.created_at %></li>
+        </ul>
+    </div>
+    <% end %>
+    <%= will_paginate %>
+    <div id='create-post'>
+        <%= link_to "Create post", new_post_path %>
+    </div>
+</section> 

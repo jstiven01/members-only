@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.paginate(page: params[:page], per_page: 6).order(created_at: :desc)
   end
 
   private

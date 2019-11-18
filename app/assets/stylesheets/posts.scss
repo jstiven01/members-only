@@ -1,3 +1,85 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.alert {    
+    margin: 0;
+    width: 700px;
+    margin: auto;
+    background-color: #00C9A8;
+    color:  #4B4453;
+
+}
+
+.all-posts {
+    margin: 0;
+    width: 700px;
+    margin: auto;
+    background-color: #FFF6FF;
+    height: 90vh;
+    text-align: center;
+    h1 {
+        margin: 0;
+        padding: 20px;
+        font-size: 40px;
+        color: #4B4453;
+    }
+    div {
+        border: 1px solid black;
+        margin: 1px;
+        font-size: 14px;
+        padding: 2px;
+         * {
+             text-align: left;
+         }
+
+         h3 {
+            font-size: 20px;
+         }
+
+         ul {
+             padding: 0;
+             font-style: oblique;
+             font-weight: bold;
+             color: #B0A8B9;
+             font-size: 10px;
+         }
+
+    }
+}
+
+#create-post {
+    background-color: #563d7c;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    color: white;
+    width: 100px;
+    margin: 10px 4px 10px auto;
+    font-weight: bold;
+
+    :hover {
+        text-decoration: underline;
+    }
+}
+
+.new-post {
+    margin: 0;
+    width: 700px;
+    margin: auto;
+    background-color: #FFF6FF;
+    height: 90vh;
+    h1 {
+        margin: 0;
+        padding: 20px;
+        font-size: 40px;
+        color: #4B4453;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        * {
+            margin: 10px 30px;
+        }
+    }
+
+}
