@@ -1,0 +1,54 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.sign-up {
+    margin: 0;
+    width: 700px;
+    margin: auto;
+    background-color: #FFF6FF;
+    height: 500px;
+    text-align: center;
+    h1 {
+        margin: 0;
+        font-size: 40px;
+        color: #4B4453;
+    }
+    .new_user {
+        display: flex;
+        flex-direction: column;
+        input[type=text], input[type=email],input[type=password], input[type=submit] {
+            width: 464px;
+            margin: 5px auto;
+        }
+        .field_with_errors {
+            margin: auto 0;
+            input[type=text], input[type=email],input[type=password], input[type=submit] {
+                border: solid 1px red;
+            }
+        }
+    }
+
+}
+
+#errors-user-signup {
+    margin: 10px 0;
+    * {
+        margin: 0;
+        color: red;
+        background: transparent;
+        margin: 0;
+        font-size: 10px;
+    }
+    ul {
+        display: flex;
+        li {
+            padding: 5px;
+        }
+    }
+    div {
+        font-size: 15px;
+    }
+
+}
+
+

@@ -1,0 +1,81 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #563d7c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: auto;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    li {
+        padding-right: 8px;
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.home {
+    margin: 0;
+    width: 700px;
+    margin: auto;
+    background-color: #FFF6FF;
+    height: 500px;
+    text-align: center;
+    h1 {
+        margin: 0;
+    }
+    .title {
+        font-family: 'Pacifico', cursive;
+        font-size: 40px;
+        color: #4B4453;
+        text-align: center;
+        padding: 40px 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        margin: 40px auto;
+        justify-content: space-around;
+        li {
+            width: 100px;
+            padding: 20px;
+            background-color: #563d7c;
+            border-radius: 5px;
+            a {
+                color: #FEF7FF;
+                :hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+}
+
+
