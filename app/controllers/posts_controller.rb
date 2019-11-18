@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.paginate(page: params[:page], per_page: 6).order(created_at: :desc)
+    @user = User.find_by(id: session[:user_id])
   end
 
   private

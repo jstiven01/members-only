@@ -4,6 +4,7 @@
     <li><%= link_to "All Posts", posts_path %></li>
     <% unless logged_in? %>
         <li><%= link_to "Sign in", signin_path %></li>
+        <li><%= link_to "Sign up", signup_path %></li>
     <% end %>
     </ul>
 </section>

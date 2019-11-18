@@ -1,10 +1,13 @@
 <section class="all-posts"> 
     <h1>ALL POSTS</h1>
+    <% if logged_in? %>
+        <p>User name: <%= @user.name %></p>
+    <% end %>
     <%= will_paginate %>
     <% @posts.each do |post| %>
     <div>
         <h3 ><%= post.title %></h3>
-        <p ><%= post.content %></p>
+        <p ><%= post.content %></span>
         
         <ul>
             <% if logged_in? %>
